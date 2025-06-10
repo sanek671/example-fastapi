@@ -21,11 +21,10 @@ services:
     restart: on-failure
 
   postgres:
-    image: postgres:13
+    image: postgres
     environment:
       - POSTGRES_PASSWORD=Cfytr1984
       - POSTGRES_DB=fastapi
-#       - POSTGRES_USER=postgres
     volumes:
       - postgres_db:/var/lib/postgresql/data
     healthcheck:
