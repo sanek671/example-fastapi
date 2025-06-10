@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings
 from pydantic import ConfigDict
+from typing import Optional
 
 
 class Settings(BaseSettings):
@@ -10,7 +11,7 @@ class Settings(BaseSettings):
     database_username: str
     secret_key: str
     algorithm: str
-    access_token_expire_minutes: int
+    access_token_expire_minutes: Optional[int]
 
     model_config = ConfigDict(env_file=".env")
 
